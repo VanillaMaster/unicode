@@ -1,15 +1,16 @@
 ## UnicodeData
-```
+<!-- C++ just for highlighting -->
+```C++
 struct category {
     // pointer to utf-8 encoded string terminated by "END OF TEXT" (\u0003);
     void* name;
-    uint8 id;
+    UInt8 id;
 }
 
 // goes till the end of data
 struct table {
-    uint32 codePoint;
-    uint8 categoryID;
+    UInt32 codePoint;
+    UInt8 categoryID;
 }
 
 struct header {
@@ -21,10 +22,11 @@ struct header {
 * every pointer is uint32;
 
 ## PropList
-```
+<!-- C++ just for highlighting -->
+```C++
 struct range {
-    uint32 start;
-    uint32 end;
+    UInt32 start;
+    UInt32 end;
 }
 
 struct table {
@@ -35,7 +37,7 @@ struct record {
     // pointer to utf-8 encoded string terminated by "END OF TEXT" (\u0003);
     void* name;
     table* data;
-    uint32 dataSize;
+    UInt32 dataSize;
 }
 
 struct header {
