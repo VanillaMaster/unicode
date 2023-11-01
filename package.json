@@ -1,0 +1,16 @@
+{
+  "name": "unicode",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "watch": "tsc --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.8.10",
+    "typescript": "^5.2.2"
+  }
+}
