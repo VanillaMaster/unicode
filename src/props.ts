@@ -44,8 +44,8 @@ for await (const line of PropList("https://unicode.org/Public/UCD/latest/ucd/Pro
 }
 
 const encoder = new TextEncoder();
-const stram = createWriteStream("./PropList.bin");
-const write: (chunk: any, encoding?: BufferEncoding) => Promise<boolean> = promisify(stram.write.bind(stram));
+const stream = createWriteStream("./PropList.bin");
+const write: (chunk: any, encoding?: BufferEncoding) => Promise<boolean> = promisify(stream.write.bind(stream));
 
 let namesOffset = 0, headerOffset = 0, payloadOffset = 0;
 
@@ -80,4 +80,4 @@ for (const [name, ranges] of data) {
 await write(new Uint8Array(headerChunk.buffer));
 await write(new Uint8Array(namesChunk.buffer));
 await write(new Uint8Array(payloadChunk.buffer));
-stram.close();
+stream.close();
