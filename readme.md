@@ -20,6 +20,7 @@ struct header {
 ```
 * header placed at start of file;
 * every pointer is uint32;
+* ```header.categories``` null terminated;
 
 ## PropList
 <!-- C++ just for highlighting -->
@@ -46,3 +47,4 @@ struct header {
 ```
 * header placed at start of file;
 * every pointer is uint32;
+* ```header.records``` null terminated;
