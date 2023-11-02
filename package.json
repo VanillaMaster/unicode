@@ -4,6 +4,9 @@
   "description": "",
   "type": "module",
   "scripts": {
+    "build": "tsc",
+    "unicodeData": "node ./dist/unicodeData.js",
+    "propList": "node ./dist/propList.js",
     "watch": "tsc --watch"
   },
   "keywords": [],
